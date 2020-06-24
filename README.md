@@ -1,4 +1,4 @@
-# owoifyx
+# owoify
 🥺 Owoifies a string
 
 ## Installation
