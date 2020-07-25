@@ -1,5 +1,5 @@
 # owoify
-🥺 Owoifies a string
+🦄 Cutting edge technologies to owoify your texts
 
 ## Installation
 ```sh
@@ -8,8 +8,11 @@ pip install owoify
 
 ## Usage
 ```python
-from owoify import owoify
-owoify("Hello friend!")  # Hewwo fwiend (*^ω^)
+from owoify import Owoifator
+
+owoifator = Owoifator()
+
+owoifator.owoify("Hello friend!")  # Hewwo fwiend (*^ω^)
 ```
 
 ## Successful projects using owoify

@@ -141,6 +141,4 @@ cython_debug/
 .vscode
 .idea
 
-proxies.txt
-proxies
 poetry.lock

@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "owoify"
-version = "0.1.1"
-description = "Owoifies a string"
+version = "0.2.0"
+description = "Cutting edge technologies to owoify your texts"
 authors = ["crinny"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-black = "^19.10b0"
 
 [tool.poetry.dev-dependencies]
+black = "^19.10b0"
 pytest = "^5.2"
 
 [build-system]

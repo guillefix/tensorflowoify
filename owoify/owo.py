@@ -1,16 +1,30 @@
 import random
 import re
+from abc import ABC, abstractmethod
 
 from owoify.constants import kaomoji
 
 
-def owoify(text: str) -> str:
-    text = re.sub(r"[lr]", "w", text)
-    text = re.sub(r"[LR]", "W", text)
-    text = re.sub(r"n([aeiou])", lambda m: "ny" + m.group()[1:], text)
-    text = re.sub(r"N([aeiou])|N([AEIOU])", lambda m: "Ny" + m.group()[1:], text)
-    text = re.sub("th", "d", text)
-    text = re.sub("ove", "uv", text)
-    text = re.sub(r"!+", lambda _: " " + random.choice(kaomoji), text)
+class BaseOwoifator(ABC):
+    @abstractmethod
+    def owoify(self, text: str) -> str:
+        pass
 
-    return text
+
+class Owoifator(BaseOwoifator):
+    _patterns = {
+        r"[lr]": "w",
+        r"[LR]": "W",
+        r"n([aeiou])": lambda m: "ny" + m.group()[1:],
+        r"N([aeiou])|N([AEIOU])": lambda m: "Ny" + m.group()[1:],
+        "th": "d",
+        "ove": "uv",
+        "no": "nu",
+        r"!+": lambda _: " " + random.choice(kaomoji)
+    }
+
+    def owoify(self, text: str) -> str:
+        for pattern, repl in self._patterns.items():
+            text = re.sub(pattern, repl, text)
+
+        return text

@@ -1,24 +1,26 @@
-from owoify import owoify
+from owoify import Owoifator
 from owoify.constants import kaomoji
+
+owoifator = Owoifator()
 
 
 def test_w():
-    assert owoify("Hello") == "Hewwo"
-    assert owoify("HELLO") == "HEWWO"
+    assert owoifator.owoify("Hello") == "Hewwo"
+    assert owoifator.owoify("HELLO") == "HEWWO"
 
 
 def test_nya():
-    assert owoify("Magni") == "Magnyi"
-    assert owoify("MAGNI") == "MAGNyI"
+    assert owoifator.owoify("Magni") == "Magnyi"
+    assert owoifator.owoify("MAGNI") == "MAGNyI"
 
 
 def test_d():
-    assert owoify("the") == "de"
+    assert owoifator.owoify("the") == "de"
 
 
 def test_uv():
-    assert owoify("oven") == "uvn"
+    assert owoifator.owoify("oven") == "uvn"
 
 
 def test_kaomoji():
-    assert owoify("!")[1:] in kaomoji
+    assert owoifator.owoify("!")[1:] in kaomoji
