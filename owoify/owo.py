@@ -15,12 +15,13 @@ class Owoifator(BaseOwoifator):
     _patterns = {
         r"[lr]": "w",
         r"[LR]": "W",
-        r"n([aeiou])": lambda m: "ny" + m.group()[1:],
-        r"N([aeiou])|N([AEIOU])": lambda m: "Ny" + m.group()[1:],
+        r"n([aeiou])": "ny\\1",
+        r"N([aeiou])": "Ny\\1",
+        r"N([AEIOU])": "NY\\1",
         "th": "d",
         "ove": "uv",
         "no": "nu",
-        r"!+": lambda _: " " + random.choice(kaomoji)
+        r"!+": " " + random.choice(kaomoji),
     }
 
     def owoify(self, text: str) -> str:

@@ -11,7 +11,7 @@ def test_w():
 
 def test_nya():
     assert owoifator.owoify("Magni") == "Magnyi"
-    assert owoifator.owoify("MAGNI") == "MAGNyI"
+    assert owoifator.owoify("MAGNI") == "MAGNYI"
 
 
 def test_d():
