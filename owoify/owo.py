@@ -21,7 +21,7 @@ class Owoifator(BaseOwoifator):
         "th": "d",
         "ove": "uv",
         "no": "nu",
-        r"!+": " " + random.choice(kaomoji),
+        r"!+": lambda _: " " + random.choice(kaomoji),
     }
 
     def owoify(self, text: str) -> str:
