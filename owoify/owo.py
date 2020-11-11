@@ -56,6 +56,8 @@ class Owoifator(BaseOwoifator):
         "^for$":"fur",
         "Fresnel":"Fennec",
         "^dropout$":"thiel_fellow",
+        "^tile$":"tail",
+        "^Tile$":"Tail",
         # "If":"Yiff",
         # "Diff":"Yiff",
         # "diff":"yiff",
@@ -94,7 +96,8 @@ class Owoifator(BaseOwoifator):
         "stop":"stahp",
         "experimental":"fun",
         "hessians":"hissians",
-        "initializers":"starters",
+        "^initializers$":"starters",
+        "^sparse$":"fine_boi",
     }
     _patterns = {
         r"[lr]": "w",
