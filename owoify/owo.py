@@ -64,6 +64,10 @@ class Owoifator(BaseOwoifator):
         "poisson":"lefishe",
         "Poisson":"LeFishe",
         "stateless":"anarchist",
+        "flatten":"flat_is_justice",
+        "Flatten":"FlatIsJustice",
+        "^reshape$":"im_not_flat",
+        "^Reshape$":"ImNotFLAT",
     }
     _patterns = {
         r"[lr]": "w",
