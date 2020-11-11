@@ -36,6 +36,12 @@ class Owoifator(BaseOwoifator):
         "no_gradient":"no_fun_allowed",
         "stop":"stahp",
         "^pow$":"paw",
+        "Cudnn$":"Cuddle",
+        "aw":"aww",
+        "box":"fox",
+        "Box":"Fox",
+        "erf":"arf",
+        "Erf":"Arf",
     }
     _patterns = {
         r"[lr]": "w",
