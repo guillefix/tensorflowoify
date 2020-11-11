@@ -13,9 +13,11 @@ class BaseOwoifator(ABC):
 class Owoifator(BaseOwoifator):
     _special_patterns = {
         "math":"mawth",
-        "nn":"nwn",
+        "^nn$":"nwn",
         "logits":"lowogits",
         "softmax":"sowftmax",
+        "softplus":"sowftplus",
+        "softsign":"sowftsign",
         "bitwise_or":"bitwise_owo",
         "raw_ops":"rawr_oops",
         "foldr":"fowdr",
@@ -23,6 +25,7 @@ class Owoifator(BaseOwoifator):
         "Dot":"Boop",
         "dot":"boop",
         "Dense":"Thicc",
+        "DenseNet169":"NiceNet",
         "dense":"thicc",
         "loss$":"iIiIIL",
         "Loss$":"IIiIIL",
@@ -52,6 +55,7 @@ class Owoifator(BaseOwoifator):
         "^For$":"Fur",
         "^for$":"fur",
         "Fresnel":"Fennec",
+        "^dropout$":"thiel_fellow",
         # "If":"Yiff",
         # "Diff":"Yiff",
         # "diff":"yiff",
@@ -87,6 +91,10 @@ class Owoifator(BaseOwoifator):
         "CancelledError":"GotNopedSowwy",
         "AbortedError":"Stahpp",
         "AlreadyExistsError":"BeenThereDoneThat",
+        "stop":"stahp",
+        "experimental":"fun",
+        "hessians":"hissians",
+        "initializers":"starters",
     }
     _patterns = {
         r"[lr]": "w",
