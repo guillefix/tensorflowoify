@@ -54,6 +54,7 @@ class Owoifator(BaseOwoifator):
         "Fresnel":"Fennec",
         # "If":"Yiff",
         # "Diff":"Yiff",
+        # "diff":"yiff",
         "Grad$":"GradStudent",
         "GradGrad$":"PostGradStudent",
         "^Logical":"Illogical",
@@ -68,6 +69,10 @@ class Owoifator(BaseOwoifator):
         "Flatten":"FlatIsJustice",
         "^reshape$":"im_not_flat",
         "^Reshape$":"ImNotFLAT",
+        "^Job":"Joj",
+        "transpose":"jojopose",
+        "Transpose":"JoJopose",
+        "convert_to_tensor":"wololo",
     }
     _patterns = {
         r"[lr]": "w",
@@ -78,7 +83,7 @@ class Owoifator(BaseOwoifator):
         "th": "d",
         "ove": "uv",
         "no": "nu",
-        r"!+": lambda _: " " + random.choice(kaomoji),
+        # r"!+": lambda _: " " + random.choice(kaomoji),
     }
 
     def __init__(self):
