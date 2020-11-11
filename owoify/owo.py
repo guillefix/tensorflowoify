@@ -32,7 +32,10 @@ class Owoifator(BaseOwoifator):
         "sqrt$":"skrrr",
         "mean":"nice",
         "top_k":"top_kek",
+        "TopK":"TopKeK",
         "swish":"swoosh",
+        "feed":"feedme",
+        "Feed":"FeedMe",
         "no_gradient":"no_fun_allowed",
         "stop":"stahp",
         "^pow$":"paw",
@@ -42,11 +45,15 @@ class Owoifator(BaseOwoifator):
         "Box":"Fox",
         "erf":"arf",
         "Erf":"Arf",
-        "FFT":"PFFT",
+        "^FFT$":"PFFT",
         "FLoor":"Floof",
         "fLoor":"floof",
         "^For$":"Fur",
         "^for$":"fur",
+        "Fresnel":"Fennec",
+        # "If":"Yiff",
+        # "Diff":"Yiff",
+        "Grad$":"GradStudent",
     }
     _patterns = {
         r"[lr]": "w",
@@ -60,17 +67,17 @@ class Owoifator(BaseOwoifator):
         r"!+": lambda _: " " + random.choice(kaomoji),
     }
 
-
+    def __init__(self):
+        special_patterns_list = list(enumerate(self._special_patterns.items()))
 
     def owoify(self, text: str) -> str:
-        special_patterns = list(enumerate(self._special_patterns.items()))
         for i, (pattern, repl) in special_patterns:
-            text = re.sub(pattern, chr(i), text)
+            text = re.sub(pattern, chr(1000+i), text)
 
         for pattern, repl in self._patterns.items():
             text = re.sub(pattern, repl, text)
 
         for i, (pattern, repl) in special_patterns:
-            text = re.sub(chr(i), repl, text)
+            text = re.sub(chr(1000+i), repl, text)
 
         return text
