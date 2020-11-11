@@ -26,6 +26,16 @@ class Owoifator(BaseOwoifator):
         "dense":"thicc",
         "loss$":"iIiIIL",
         "Loss$":"IIiIIL",
+        "min$":"smol",
+        "max$":"big",
+        "prod$":"poke",
+        "sqrt$":"skrrr",
+        "mean":"nice",
+        "top_k":"top_kek",
+        "swish":"swoosh",
+        "no_gradient":"no_fun_allowed",
+        "stop":"stahp",
+        "^pow$":"paw",
     }
     _patterns = {
         r"[lr]": "w",
