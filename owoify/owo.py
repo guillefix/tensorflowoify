@@ -31,6 +31,7 @@ class Owoifator(BaseOwoifator):
         "prod$":"poke",
         "sqrt$":"skrrr",
         "mean":"nice",
+        "Mean":"Nice",
         "top_k":"top_kek",
         "TopK":"TopKeK",
         "swish":"swoosh",
@@ -54,6 +55,12 @@ class Owoifator(BaseOwoifator):
         # "If":"Yiff",
         # "Diff":"Yiff",
         "Grad$":"GradStudent",
+        "GradGrad$":"PostGradStudent",
+        "^Logical":"Illogical",
+        "^Matrix":"TheMatrix",
+        "^Mod$":"DiscordMod",
+        "^MulNoNan$":"Mulan",
+        "normal":"normie",
     }
     _patterns = {
         r"[lr]": "w",
