@@ -61,6 +61,9 @@ class Owoifator(BaseOwoifator):
         "^Mod$":"DiscordMod",
         "^MulNoNan$":"Mulan",
         "normal":"normie",
+        "poisson":"lefishe",
+        "Poisson":"LeFishe",
+        "stateless":"anarchist",
     }
     _patterns = {
         r"[lr]": "w",
@@ -75,16 +78,16 @@ class Owoifator(BaseOwoifator):
     }
 
     def __init__(self):
-        special_patterns_list = list(enumerate(self._special_patterns.items()))
+        self.special_patterns_list = list(enumerate(self._special_patterns.items()))
 
     def owoify(self, text: str) -> str:
-        for i, (pattern, repl) in special_patterns:
+        for i, (pattern, repl) in self.special_patterns_list:
             text = re.sub(pattern, chr(1000+i), text)
 
         for pattern, repl in self._patterns.items():
             text = re.sub(pattern, repl, text)
 
-        for i, (pattern, repl) in special_patterns:
+        for i, (pattern, repl) in self.special_patterns_list:
             text = re.sub(chr(1000+i), repl, text)
 
         return text
