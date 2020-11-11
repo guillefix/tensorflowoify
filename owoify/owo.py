@@ -42,6 +42,11 @@ class Owoifator(BaseOwoifator):
         "Box":"Fox",
         "erf":"arf",
         "Erf":"Arf",
+        "FFT":"PFFT",
+        "FLoor":"Floof",
+        "fLoor":"floof",
+        "^For$":"Fur",
+        "^for$":"fur",
     }
     _patterns = {
         r"[lr]": "w",
